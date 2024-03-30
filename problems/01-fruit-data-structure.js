@@ -72,13 +72,12 @@ NOTE: Call a function you previously wrote as a helper function.
 */
 
 
-// function getFruitKeys(fruits) {
+function getFruitKeys(fruits) {
    
-    
-//     const result = fruits.forEach((obj) => Object.keys(obj))
-
-//     return result
-// }
+    for(let obj of fruits) {
+        return Object.keys(obj)
+    }
+}
 
 
 
@@ -94,8 +93,11 @@ console.log(getNutritionsKeys(fruits));
 
 function getNutritionsKeys(fruits) {
     
-    
-
+    for (let obj of fruits) {
+       for(let key in obj) {
+        return Object.keys(obj['nutritions'])
+       }
+    }
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/

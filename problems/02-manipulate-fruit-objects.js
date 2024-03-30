@@ -9,8 +9,15 @@ console.log(addKeyAndValueToAll(fruits, "inStock", true));
 */
 
 function addKeyAndValueToAll(array, key, value) {
-    // Your code here 
+    
+    for (let obj of array) {
+
+        obj[key] = value
+       
+    }
+    return array
 }
+
 
 /* 08. `addKeyAndValueToOne()` - Return object at the given index array, adding the given key and
 value to that fruit object
@@ -20,8 +27,13 @@ console.log(addKeyAndValueToOne(fruits, "color", "red", 1));
 */
 
 function addKeyAndValueToOne(array, key, value, index) {
-    // Your code here 
+    const obj = array[index]
+    obj[key] = value
+    console.log(obj)
+    return obj
+
 }
+addKeyAndValueToOne(fruits, "color", "red", 1)
 
 /* 09. `updateKeyName()` - Change the old key name to the new key name in all
 objects, and return the resulting array.
