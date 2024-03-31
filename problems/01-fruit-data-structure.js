@@ -95,6 +95,7 @@ function getNutritionsKeys(fruits) {
     
     for (let obj of fruits) {
        for(let key in obj) {
+        console.log(obj)
         return Object.keys(obj['nutritions'])
        }
     }
